@@ -3,7 +3,7 @@
 > Turn hand-drawn sketches into AI-generated stories, characters, and worlds.
 <img width="1264" height="628" alt="cb838acc-0581-4cf6-b3b5-207e78982d9b" src="https://github.com/user-attachments/assets/7debde18-a135-420a-806d-8bf7d93eb867" />
 
-🔗 **Live demo:** [sketch2story.vercel.app](https://sketch2story.vercel.app)
+🔗 **Live demo:** [sketch2story.vercel.app](https://sketch2story-k5me6kqig-aishwarya634-s-projects13.vercel.app/)
 
 ## 💡 The Idea
 
