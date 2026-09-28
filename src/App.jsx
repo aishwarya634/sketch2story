@@ -23,14 +23,14 @@ export default function App() {
     try {
       const base64 = imageData.split(",")[1];
 
-      const response = await fetch("https://models.inference.ai.azure.com/chat/completions", {
+      const response = await fetch("https://models.github.ai/inference/chat/completions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`,
         },
         body: JSON.stringify({
-          model: "gpt-4o",
+          model: "openai/gpt-4o",
           max_tokens: 1000,
           messages: [
             {
