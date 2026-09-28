@@ -1,16 +1,72 @@
-# React + Vite
+# ✏️ Sketch2Story
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Turn hand-drawn sketches into AI-generated stories, characters, and worlds.
+<img width="1264" height="628" alt="cb838acc-0581-4cf6-b3b5-207e78982d9b" src="https://github.com/user-attachments/assets/7debde18-a135-420a-806d-8bf7d93eb867" />
 
-Currently, two official plugins are available:
+🔗 **Live demo:** [sketch2story.vercel.app](https://sketch2story.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 💡 The Idea
 
-## React Compiler
+Everyone has doodles that could be something bigger. Sketch2Story takes a simple drawing and grows it into a full story with characters and a world, so creativity never gets stuck at a blank page.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🖌️ Draw or upload a sketch
+- 📖 AI-generated story based on your drawing
+- 🧙 Character and world creation
+- 📱 Responsive, clean UI
+- ☁️ Deployed on Vercel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+| Layer | Tools |
+|-------|-------|
+| Frontend | React, Vite, JavaScript |
+| AI | Generative AI API |
+| Linting | ESLint |
+| Deployment | Vercel |
+
+## 📁 Project Structure
+
+```
+sketch2story/
+├── public/         # Static assets
+├── src/            # React components and logic
+├── index.html
+├── vite.config.js
+└── package.json
+```
+
+## 🚀 Run Locally
+
+```bash
+# 1. Clone
+git clone https://github.com/aishwarya634/sketch2story.git
+cd sketch2story
+
+# 2. Install dependencies
+npm install
+
+# 3. Add your API key
+echo "VITE_API_KEY=your_key_here" > .env
+
+# 4. Start the dev server
+npm run dev
+```
+
+## 🧠 What I Learned
+
+- Building a React app with Vite
+- Connecting a frontend to an AI API
+- Turning a creative idea into a working product
+
+## 🔮 Future Improvements
+
+- [ ] Save and share stories
+- [ ] Multiple art styles and genres
+- [ ] Export story as PDF
+
+## 👩‍💻 Author
+
+**Aishwarya Biradar**, CS student at RNSIT
+[GitHub](https://github.com/aishwarya634)
