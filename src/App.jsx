@@ -23,38 +23,24 @@ export default function App() {
     try {
       const base64 = imageData.split(",")[1];
 
-      const response = await fetch("https://models.github.ai/inference/chat/completions", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`,
-        },
-        body: JSON.stringify({
-          model: "openai/gpt-4o",
-          max_tokens: 1000,
-          messages: [
-            {
-              role: "user",
-              content: [
-                {
-                  type: "image_url",
-                  image_url: {
-                    url: `data:image/png;base64,${base64}`,
-                  },
-                },
-                {
-                  type: "text",
-                  text: `Look at this sketch carefully. Describe what you see, then write a creative ${style} inspired by it. Make it vivid, imaginative, and around 150-200 words. Format it nicely with a title.`,
-                },
-              ],
-            },
-          ],
-        }),
-      });
+      const response = await fetch("/api/generate", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    base64,
+    style,
+  }),
+});
 
       const data = await response.json();
-      if (data.error) throw new Error(data.error.message);
-      setStory(data.choices[0].message.content);
+
+if (!response.ok) {
+  throw new Error(data.error || "Failed to generate story");
+}
+
+setStory(data.choices[0].message.content);
     } catch (err) {
       setError("Something went wrong: " + err.message);
     } finally {
